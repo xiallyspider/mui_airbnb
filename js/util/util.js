@@ -1,6 +1,6 @@
 var util = {
 	options: {
-		ACTIVE_COLOR: "#FF5B61",
+		ACTIVE_COLOR: "#f80f48",
 		NORMAL_COLOR: "#211717",
 		subpages: ["html/explore.html", "html/wishList.html", "html/story.html", "html/messageBox.html", "html/login.html"]
 	},
@@ -85,6 +85,15 @@ var util = {
 		nviewEvent.drawText(currTag.text, currTag.position, util.changeColor(currTag.textStyles, color), currTag.id)
 		
 	},
+	/**
+	 * 点击tab按钮出现水波纹效果
+	 * 不太好做，先暂时放一下
+	 */
+	// getStyle: function(obj, color) {
+	// 	obj = util.changeColor(obj, color);
+	// 	obj.
+	// 	return obj;
+	// },
 	changeColor: function(obj, color) {
 		obj.color = color;
 		return obj;

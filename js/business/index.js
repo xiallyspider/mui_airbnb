@@ -11,11 +11,20 @@ var indexVm = new Vue({
 			swipeBack: false
 		});
 		mui.plusReady(function() {
+			self.initPage();
 			self.initEvent();
 			self.initTab();
 		})
 	},
 	methods: {
+		initPage: function() {
+			this.initPageStyle();
+		},
+		initPageStyle:function () {
+			plus.navigator.setStatusBarStyle("dark");
+			plus.navigator.setStatusBarBackground('#FFFFFF');//设置状态栏的颜色
+		},
+		
 		initEvent: function() {
 			var self = this;
 			mui('#sendSMS').on('tap','#mui-content',function(){
@@ -50,16 +59,22 @@ var indexVm = new Vue({
 			
 			nview.addEventListener('click', function(e) {
 				var clientX = e.clientX;
+				var view = plus.nativeObj.View.getViewById('slider');
 				if(clientX > 0 && clientX <= parseInt(pageW * 0.20)) {
 					currIndex = 0;
+					view.show();
 				} else if(clientX > clientX <= parseInt(pageW * 0.20) && clientX <= parseInt(pageW * 0.4) ) {
 					currIndex = 1;
+					view.hide();
 				} else if(clientX > clientX <= parseInt(pageW * 0.40) && clientX <= parseInt(pageW * 0.6) ) {
 					currIndex = 2;
+					view.hide();
 				}  else if(clientX > clientX <= parseInt(pageW * 0.60) && clientX <= parseInt(pageW * 0.8) ) {
 					currIndex = 3;
+					view.hide();
 				} else {
 					currIndex = 4;
+					view.hide();
 				}
 				// mui.alert(currIndex)
 				//匹配对应tab窗口
