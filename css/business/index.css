@@ -17,4 +17,71 @@
 html, body{
 	margin: 0;
 	padding: 0;
+	background-color: #ffffff;
 }
+.mui-content{
+	height: 100%;
+	width: 100%;
+}
+.search-box-wrapper{
+	height: 240px;
+	width:100%;
+	position: absolute;
+	top:220px;
+	padding: 0 20px;
+}
+.search-tab-box{
+	height: 50px;
+	line-height: 50px;
+}
+.search-tab-item{
+    height: 32px;
+    width: 28px;
+    margin-right: 20px;
+    line-height: 32px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
+.active{
+	color: #0a8e8b;
+	border-bottom: 2px solid;
+}
+.search-input-box{
+	margin-top: 10px;
+}
+.mui-input-row{
+	margin-bottom: 10px;
+    height: 55px;
+	width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+	border-radius: 4px;
+	box-shadow: 0px 1px 5px 0.1px #BBBBBB;
+}
+.mui-input-row span{
+	font-size: 20px;
+	padding: 5px;
+}
+.search-input-box input{
+	height: 56px;
+	border: none;
+	margin-bottom: 0;
+	padding: 0;
+	font-size: 15px;
+	font-weight: 650;
+	color: #000000;
+}
+.search-btn{
+	width: 100%;
+	color: #FFFFFF;
+	font-weight: 700;
+	border: none;
+	margin-top: 10px;
+	height: 50px;
+	background-color: #0A8E8B;
+}
+

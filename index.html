@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title></title>
     <link href="css/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
 	<link rel="stylesheet" type="text/css" href="css/business/index.css"/>
 </head>
 <body>
 	<div id="mui-content">
+		<div class="search-box-wrapper">
+			<div class="search-tab-box">
+				<span class="search-tab-item active" id="tab-hourse-src" @tap="toHourseSrc">房源</span>
+				<span class="search-tab-item" id="tab-experence" @tap="toExperence">体验</span>
+			</div>
+			<div class="search-input-box">
+				<div class="mui-input-row">
+					<span class="iconfont icon-sousuo"></span>
+					<input type="text"  class="mui-input-clear" id="search-place" placeholder="输入目的、城市或景点" />
+				</div>
+				<div class="mui-input-row">
+					<span class="iconfont icon-sousuo"></span>
+					<input type="text"  class="mui-input-clear" id="search-date" :placeholder="dateInputPlacehoder" />
+				</div>
+			</div>
+			<button type="button" class="search-btn">搜索房源</button>
+		</div>
 	</div>
 	<script src="js/mui.min.js"></script>
 	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>

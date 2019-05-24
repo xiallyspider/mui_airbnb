@@ -2,7 +2,7 @@ var indexVm = new Vue({
 	el: "#mui-content",
 	data: function() {
 		return {
-			
+			dateInputPlacehoder: '入住退房日期'
 		}
 	},
 	mounted: function() {
@@ -24,12 +24,23 @@ var indexVm = new Vue({
 			plus.navigator.setStatusBarStyle("dark");
 			plus.navigator.setStatusBarBackground('#FFFFFF');//设置状态栏的颜色
 		},
-		
 		initEvent: function() {
 			var self = this;
-			mui('#sendSMS').on('tap','#mui-content',function(){
-			  self.sendSMS();
-			}) 
+			// document.getElementById('tab-hourse-src').addEventListener('tap', function(e) {
+			// 	mui.alert("运行到这里")
+			// 	this.classList.add('active');
+			// 	document.getElementById('tab-experence').classList.remove('active');
+			// })
+		},
+		toHourseSrc: function() {
+			this.dateInputPlacehoder = "入住退房日期";
+			document.getElementById('tab-hourse-src').classList.add('active')
+			document.getElementById('tab-experence').classList.remove('active');
+		},
+		toExperence: function() {
+			this.dateInputPlacehoder = "活动日期";
+			document.getElementById('tab-hourse-src').classList.remove('active')
+			document.getElementById('tab-experence').classList.add('active')
 		},
 		sendSMS: function() {
 			// var msg = plus.messaging.createMessage(plus.messaging.TYPE_SMS);
